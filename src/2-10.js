@@ -17,4 +17,15 @@
 // }
 // console.log(obj)
 
+//ES6中，如果有一个变量的键，需要使用一个变量的内容作为键则使用[]
+// let name = '楠溪泽岸'
+// let age = 21
+// let XXX = 'school'
+// let obj = {
+//     name,
+//     age,
+//     [XXX]:'YNUFE'
+// }
+// console.log(obj)
+
 
