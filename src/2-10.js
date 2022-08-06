@@ -77,6 +77,55 @@
 // console.log(obj1 == obj2)
 // console.log(Object.is(obj1,obj2))
 
+//扩展运算符
+// let x = {
+//     a:3,
+//     b:4
+// }
+// let y = {...x}
+// console.log(y)
+//Object.assign(y,x)合并两个对象
+// let x = {
+//     a:3,
+//     b:4
+// }
+// let y = {
+//     c:5,
+//     d:6
+// }
+//把后面的对象合并到前面
+// Object.assign(y,x)
+// console.log(y)
 
+// 'a' in obj 用来判断对象里是否含有a属性
+// let x = {
+//     a:3,
+//     b:4
+// }
+// console.log('a' in x)
+//in可以判断数组下标处，是否有值
+// let arr = [1,2,3]
+// console.log(3 in arr)
 
-
+//对象的遍历方式
+// let obj = {
+//     name:"楠溪泽岸",
+//     age:21,
+//     school:"YNUFE"
+// }
+// //循环遍历
+// for(let key in obj){
+//     console.log(key,obj[key])
+// }
+// //Object.keys(obj).forEach()
+// Object.keys(obj).forEach(key =>{
+//     console.log(key,obj[key])
+// })
+// //Object.getOwnPropertyNames(obj).forEach()
+// Object.getOwnPropertyNames(key=>{
+//     console.log(key,obj[key])
+// })
+// //Reflect.ownKeys(obj).forEach()
+// Reflect.ownKeys(obj).forEach(key=>{
+//     console.log(key,obj[key])
+// })
