@@ -29,4 +29,44 @@ console.log(obj.name)
 //
 // }
 
+//让Object的操作变成一些函数行为
+//让命令式操作变成函数式操作
+//命令式
+console.log('assign' in Object)
+//函数式
+console.log(Reflect.has(Object,'assign'))
 
+//Reflect对象的方法与Proxy的方法一一对应
+let user = {
+    name:'萧炎',
+    age:21,
+    _password:'123456'
+}
+user = new Proxy(user,{
+    get(target,prop){
+        if(target[prop].startsWith('_')){
+            return new Error('不可访问')
+        }else{
+            return Reflect.get(target,prop)
+        }
+    },
+    set(target,prop,value){
+        if(target[prop].startsWith('_')){
+            return new Error('不可访问')
+        }else{
+            Reflect.set(target,prop,value)
+            return true
+        }
+    },
+    // has(target,prop){},
+    deleteProperty(target, prop) {
+        if(target[prop].startsWith('_')){
+            return new Error('不可访问')
+        }else{
+            Reflect.deleteProperty(target,prop)
+        }
+    },
+    ownKeys(target) {
+        return Reflect.ownKeys(target).filter(key=>!key.startsWith('_'))
+    }
+})
