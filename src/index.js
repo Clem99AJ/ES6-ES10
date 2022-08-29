@@ -25,4 +25,7 @@
 // import './4-3异步编程解决方案Prpmise'
 // import './4-7Promise的静态方法'
 // import './4-8异步编程解决方法Generator'
-import './4-10迭代器Iterator'
+// import './4-10迭代器Iterator'
+// import './4-11模块化Module'
+// import './5-1数组扩展includes()'
+// import './5-2数值扩展：幂运算符'
