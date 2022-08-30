@@ -29,3 +29,6 @@
 // import './4-11模块化Module'
 // import './5-1数组扩展includes()'
 // import './5-2数值扩展：幂运算符'
+// import './ES8-2017/6-1异步编程解决方案AsyncAwait'
+// import './ES8-2017/6-2对象扩展'
+import './ES8-2017/6-3对象属性描述符'
